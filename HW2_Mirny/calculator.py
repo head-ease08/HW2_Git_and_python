@@ -1,6 +1,12 @@
 def add(a, b):
     return a + b
 
+def div(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return('Error! Zero division!')
+
 def main():
     expr = input('Enter expression.\n').strip()
     a_str, op, b_str = expr.split()
